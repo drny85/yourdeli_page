@@ -51,13 +51,13 @@ const EmailForm: React.FC = () => {
       name: data.name,
     };
     try {
-      const response = await axios.post("/api/email", {
+      await axios.post("/api/email", {
         email: params.email,
         name: params.name,
         subject: params.subject,
         message: params.message,
       });
-      console.log(response.data);
+
       router.replace("/email-sent");
     } catch (error) {
       console.log(error);
@@ -116,7 +116,11 @@ const EmailForm: React.FC = () => {
                 Select a subject
               </option>
               {subjectOptions.map((option) => (
-                <option key={option} value={option} className="text-black py-6">
+                <option
+                  key={option}
+                  value={field.value}
+                  className="text-black py-6"
+                >
                   {option}
                 </option>
               ))}

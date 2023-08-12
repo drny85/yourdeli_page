@@ -1,5 +1,5 @@
 import { EmailBody } from "@/types";
-import { NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server";
 import * as nodemailer from "nodemailer";
 
 const mailer = nodemailer.createTransport({
@@ -7,17 +7,7 @@ const mailer = nodemailer.createTransport({
   port: 465,
   secure: true,
   auth: { user: "apikey", pass: process.env.SENDGRID_API_KEY },
-  // @ts-ignore
-  //auth: { api_key: process.env.SENDGRID_API_KEY! }
-  // port: 587,
-  // host: 'smtp.gmail.com',
-  // secure: false,
-  // auth: {
-  //     user: process.env.GMAIL_EMAIL,
-  //     pass: process.env.GMAIL_PASSWORD
-  // }
 });
-console.log("KEY", process.env.SENDGRID_API_KEY);
 
 function sendMail(
   to: "melendez@robertdev.net",
@@ -35,9 +25,8 @@ function sendMail(
 
 export async function POST(req: Request, res: NextResponse) {
   try {
-    console.log("HERE");
     const body = (await req.json()) as EmailBody;
-    console.log(body);
+
     const data = await sendMail(
       "melendez@robertdev.net",
       body.subject,
@@ -50,7 +39,7 @@ export async function POST(req: Request, res: NextResponse) {
 
       "melendez@robertdev.net"
     );
-    return new Response(JSON.stringify(data.response));
+    return new Response(JSON.stringify(data.accepted));
   } catch (error) {
     console.log(error);
   }
@@ -68,8 +57,8 @@ const html = (data: EmailBody) => `
 <body>
 <main style="width:100%;height:100%;display:flex;justify-content:center;background-color:#efefef;padding:0;marging:0;box-sizing:border-box border-radius:10px;">
 <div style="padding:12px;max-width:680px; margin:0 auto;padding:10px;">
-    <h2 style="text-transform:caoitalize;font-size:20px;margin-bottom:20px;margin-top:20px;font-weight:bold">Hello ${data.name}</h2>
-    <p>You just received an email from ${data.name}</p>
+    
+    <h3 style="text-transform:caoitalize;font-size:20px;margin-bottom:20px;margin-top:20px;font-weight:bold;text-transform:capitalize">You just received an email from ${data.name}</h3>
     <p style="font-size:18px;line-height:24px;margin-bottom:20px;margin-top:20px;font-weight:bold">Email: ${data.email}</p>
     <Subject: style="font-size:18px;line-height:24px;margin-bottom:20px;margin-top:20px;font-weight:bold">Subject: ${data.subject}</h3>
     <p style="font-size:18px;line-height:24px;margin-bottom:20px;margin-top:20px;font-weight:bold">Here is the message:</p>
