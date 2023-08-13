@@ -61,6 +61,8 @@ const EmailForm: React.FC = () => {
       router.replace("/email-sent");
     } catch (error) {
       console.log(error);
+      const err = error as any;
+      alert(err.message);
     }
   };
 

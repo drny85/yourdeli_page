@@ -42,6 +42,8 @@ export async function POST(req: Request, res: NextResponse) {
     return new Response(JSON.stringify(data.accepted));
   } catch (error) {
     console.log(error);
+    const err = error as any;
+    throw new Error(err.message);
   }
 }
 
