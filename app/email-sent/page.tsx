@@ -5,7 +5,7 @@ import Link from "next/link";
 const Success: React.FC = () => {
   return (
     <div className="grid h-screen place-items-center">
-      <div>
+      <div className="p-6">
         <h1 className="text-2xl font-bold mb-4">Email Sent Successfully</h1>
         <p className="py-6 mb-5">
           Your email has been successfully sent. We'll get back to you soon.
