@@ -4,7 +4,7 @@ const disclaimers = (): { title: string; message: string }[] => [
   {
     title: "Introduction",
     message:
-      'Welcome to Your Deli! Your privacy is important to us. This Privacy Policy explains how Your Deli ("we," "us," or "our") collects, uses, discloses, and safeguards your personal information when you use our delivery app ("App"). By using the App, you agree to the terms of this Privacy Policy.',
+      'Welcome to Your Deli! Your privacy is important to us. This Privacy Policy explains how Your Deli ("we," "us," or "our") collects, uses, discloses, and safeguards your personal information when you use our delivery app ("Your Deli"). By using the App, you agree to the terms of this Privacy Policy.',
   },
   {
     title: "Location Information: ",
