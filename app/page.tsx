@@ -27,6 +27,13 @@ function page() {
           </p>
         </Link>
       </div>
+      <div className="my-4">
+        <Link href="/privacy">
+          <p className="cursor-pointer text-slate-500 hover:underline text-lg hover:text-xl transition-all">
+            Privacy Policy
+          </p>
+        </Link>
+      </div>
       <div className="mt-6 bg-slate-50 rounded-md p-2 shadow-md px-6">
         <Link href="/contact">
           <p className="cursor-pointer text-slate-500 hover:underline text-lg hover:text-xl transition-all">
