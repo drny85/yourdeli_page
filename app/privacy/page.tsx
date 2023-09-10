@@ -71,7 +71,7 @@ const disclaimers = (): { title: string; message: string }[] => [
 
 const Terms = () => {
   return (
-    <div className="h-full w-full flex justify-center items-center flex-col p-6">
+    <div className="h-full max-w-[800px] mx-auto flex justify-center flex-col p-6 ">
       <h2 className="text-2xl font-bold">Privacy Policy for Your Deli</h2>
       <div>
         {disclaimers().map((disclaimer) => (
