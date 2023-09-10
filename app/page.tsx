@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 function page() {
   return (
-    <div className="w-full h-screen flex justify-center items-center flex-col p-4">
+    <div className="w-full h-[100%]  flex justify-center items-center flex-col p-4">
       <motion.div
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
@@ -64,9 +64,7 @@ function page() {
             </p>
           </Link>
         </div>
-        <div className="absolute bottom-10 right-10">
-          <p className="text-sm">@ RobertDev {new Date().getFullYear()}</p>
-        </div>
+
         <div className="flex justify-center items-center py-3 ">
           <div
             onClick={() =>
@@ -82,7 +80,7 @@ function page() {
               alt="App Store"
               width={400}
               height={200}
-              className="px-2 bg-black"
+              className="w-full"
             />
           </div>
           <div
@@ -97,13 +95,16 @@ function page() {
             <Image
               src="/android.png"
               alt="Google Play"
-              width={400}
+              width={350}
               height={200}
-              className="px-2 bg-black"
+              className="w-full"
             />
           </div>
         </div>
       </motion.div>
+      <div className="justify-end w-full my-2">
+        <p className="text-sm">@ RobertDev {new Date().getFullYear()}</p>
+      </div>
     </div>
   );
 }
