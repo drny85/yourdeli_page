@@ -1,0 +1,11 @@
+<script>
+   
+const queryString = window.location.search;
+
+// Parse the query string
+const urlParams = new URLSearchParams(queryString);
+
+// Retrieve specific parameters
+const param = urlParams.get('linking'); 
+    window.location.replace(param);
+</script>
