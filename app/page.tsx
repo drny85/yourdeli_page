@@ -3,10 +3,14 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { motion } from "framer-motion";
+import Head from "next/head";
 
 function page() {
   return (
     <div className="min-h-screen mx-auto items-center justify-center flex flex-col mt-4">
+      <Head>
+      <meta name="apple-itunes-app" content="app-id=drny85@gmail.com" />
+      </Head>
       <motion.div
         initial={{ y: -100, opacity: 0 }}
         animate={{ y: 0, opacity: 1, rotate: 360 }}
