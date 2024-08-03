@@ -5,7 +5,7 @@
           "appIDs": [
             "JEBPX7GX5C.net.robertdev.new-deli"
           ],
-          "paths": ["/*"],
+          "paths": ["*"],
           "components": [
             {
               "/": "*",
