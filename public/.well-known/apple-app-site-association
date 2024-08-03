@@ -1,0 +1,27 @@
+{
+    "applinks": {
+      "details": [
+        {
+          "appIDs": [
+            "JEBPX7GX5C.net.robertdev.new-deli"
+          ],
+          "components": [
+            {
+              "/": "*",
+              "comment": "Matches all routes"
+            }
+          ]
+        }
+      ]
+    },
+    "activitycontinuation": {
+      "apps": [
+        "JEBPX7GX5C.net.robertdev.new-deli"
+      ]
+    },
+    "webcredentials": {
+      "apps": [
+        "JEBPX7GX5C.net.robertdev.new-deli"
+      ]
+    }
+  }
