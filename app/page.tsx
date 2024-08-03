@@ -9,7 +9,7 @@ function page() {
   return (
     <div className="min-h-screen mx-auto items-center justify-center flex flex-col mt-4">
       <Head>
-      <meta name="apple-itunes-app" content="app-id=drny85@gmail.com" />
+      <meta name="apple-itunes-app" content="app-id=6596784482" />
       </Head>
       <motion.div
         initial={{ y: -100, opacity: 0 }}
