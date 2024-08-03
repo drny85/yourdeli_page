@@ -3,12 +3,26 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 
 const inter = Inter({ subsets: ["latin"] });
-
 export const metadata: Metadata = {
-  title: "Robert Dev",
-  description:
-    "Welcome to Your Deli App, your trusted local delivery app that simplifies your daily life. Whether it's groceries, essentials, or special treats, Your Deli connects you with nearby stores and businesses, making errands a breeze.",
+  applicationName:'Your Deli',
+  appLinks:{
+    
+    ios:{
+      app_name:'Your Deli',
+      app_store_id:'6596784482',
+      url:''
+     
+    }
+  }
+   
+ 
 };
+
+// export const metadata: Metadata = {
+//   title: "Robert Dev",
+//   description:
+//     "Welcome to Your Deli App, your trusted local delivery app that simplifies your daily life. Whether it's groceries, essentials, or special treats, Your Deli connects you with nearby stores and businesses, making errands a breeze.",
+// };
 
 export default function RootLayout({
   children,
@@ -18,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-      <meta name="apple-itunes-app" content="app-id=6596784482" />
+      {/* <meta name="apple-itunes-app" content="app-id=6596784482" /> */}
       </head>
       <body className={inter.className}>{children}</body>
     </html>
